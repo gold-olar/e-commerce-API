@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
+
 const productSchema = new Schema({
     name: {
         type: String,
@@ -16,7 +17,11 @@ const productSchema = new Schema({
     },
     imageUrl: {
         type: String,
-        required: true
+        // required: true
+    },
+    category : {
+        type: String,
+        default: "random",
     },
     quantityAvailable: {
         type: Number,
